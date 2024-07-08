@@ -1,12 +1,12 @@
 {
-  "devDependencies": {
-    "eslint": "^8.57.0",
-    "eslint-config-standard": "^17.1.0",
-    "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-n": "^16.6.2",
-    "eslint-plugin-promise": "^6.1.1"
-  },
-  "dependencies": {
-    "express": "^4.18.3"
+    "devDependencies": {
+      "standard": "*"
+    },
+    "dependencies": {
+      "express": "^4.19.2",
+      "socket.io": "^4.7.5"
+    },
+    "scripts": {
+      "start": "node servidor.js"
+    }
   }
-}
