@@ -75,7 +75,12 @@ const flappybird = {
     altura:     ,      //tamanho do sprite no jogo
     x:          ,     //localização do sprite no canvas
     y:          ,    //localização do sprite no canvas
-
+    gravidade: 0.25,
+    velocidade: 0,
+    atualiza() {
+        flappybird.velocidade = flappybird.velociadade + flappybird.gravidade;
+        flappybird.y = flappy.bird.y + flappybird.velocidade;
+    },
    desenha() {
     contexto.drawImage(
         sprites,
@@ -88,11 +93,12 @@ const flappybird = {
 }
 
 functionloop() {
+    flappybird.atualiza();
     planodefundo.desenha();
     chao.desenha();
     flappybird.desenha();
+    
 
-    flappybird.y = flappy.bird.y + 1;
 
     requestAnimationFrame(loop);
 }
